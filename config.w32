@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("opdump", "for opdump support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("opdump", "enable opdump support", "no");
+
+if (PHP_OPDUMP != "no") {
+	EXTENSION("opdump", "opdump.c", PHP_EXTNAME_SHARED, "/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+}
+
